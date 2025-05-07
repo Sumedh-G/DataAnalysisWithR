@@ -1,0 +1,73 @@
+---
+title: "An Introduction to Data Analysis using Programming"
+author: "Sumedh Girish"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+
+\pagebreak
+
+# How to use this book
+
+\pagebreak
+
+\pagebreak
+
+# Introduction to the R Programming Paradigm
+
+- R, while being powerful lacks abstraction
+
+- To avoid having to reinvent the wheel, we use packages in R,
+  which is basically code written by other people to make our life simpler
+
+- The most popular and widely used R package(s) come under the umbrella of the "tidyverse"
+
+- It streamlines the process of dealing with data, standardizing
+  a way to write R code for data analysis
+  
+```{r results="hide"}
+library("tidyverse")
+```
+
+### Does working more hours make you smoke more?
+
+  
+## 1. Importing the data
+
+- We use the readr library to read data in R
+
+```{r}
+# Reading from a csv file ../raw_data/ESS11.csv
+filename <- "../raw_data/ESS11.csv"
+datatibble <- read_csv(filename, show_col_types = FALSE)
+print(datatibble)
+```
+
+- Notice how the information we want is just a subset of this data
+
+## 2. Filtering the data we have
+
+- We use the dplyr and tidyr library to do this
+
+\pagebreak
+
+```{r}
+filtered_data <- datatibble |>
+  select("cgtsmok", "wkhct", "wkhtot", "tporgwk") |>
+  drop_na()
+print(filtered_data)
+```
+
+- notice how data has a lot of invalid row values
+
+```{r}
+cleaned_data <- filtered_data |>
+  filter(cgtsmok >= 1 & cgtsmok <= 6) |>
+  filter(tporgwk >= 1 & tporgwk <= 6) |>
+  filter(wkhct >= 0 & wkhct <= 168) |>
+  filter(wkhtot >= 0 & wkhtot <= 168)
+print(cleaned_data)
+```
+
