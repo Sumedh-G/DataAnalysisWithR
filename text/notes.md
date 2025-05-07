@@ -1,10 +1,10 @@
 ### Important links
 
 -> Basics of the R Programming Language
-[Programming Syntax and Semantics](https://www.youtube.com/watch?v=QJCt9GNCD1M&list=PLEDdkzD9hUd7W0T7la6JNSfxtGjAd2bm7) 
-[Reproducible Research in R](https://ecorepsci.github.io/reproducible-science/index.html) 
-[The Art of Data Analysis](https://students.aiu.edu/submissions/profiles/resources/onlineBook/D9s8s7_Art_of_Data_Analysis_Statistics.pdf) 
-[Reading Data in R](https://r4ds.hadley.nz/data-import) 
+[Programming Syntax and Semantics](https://www.youtube.com/watch?v=QJCt9GNCD1M&list=PLEDdkzD9hUd7W0T7la6JNSfxtGjAd2bm7)
+[Reproducible Research in R](https://ecorepsci.github.io/reproducible-science/index.html)
+[The Art of Data Analysis](https://students.aiu.edu/submissions/profiles/resources/onlineBook/D9s8s7_Art_of_Data_Analysis_Statistics.pdf)
+[Reading Data in R](https://r4ds.hadley.nz/data-import)
 
 1. How do we do data science, ie how do we deal with large amounts of data?
 
